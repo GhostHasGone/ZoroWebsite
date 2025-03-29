@@ -6,7 +6,7 @@
 <head>
 	<meta charSet="utf-8" />
 	<meta name="viewport" content="width=device-width" />
-	<title>Zoro</title>
+	<title>Zoro | Download</title>
 	<meta name="next-head-count" content="3" />
 	<meta property="og:title" content="Lilith" />
 	<meta property="og:type" content="website" />
@@ -19,8 +19,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 	<link rel="preload" href="css/001.css" as="style" />
 	<link rel="stylesheet" href="css/001.css" data-n-g="" />
-	<link rel="preload" href="css/005.css" as="style" />
-	<link rel="stylesheet" href="css/005.css" data-n-p="" />
+	<link rel="preload" href="css/004.css" as="style" />
+	<link rel="stylesheet" href="css/004.css" data-n-p="" />
 	<noscript data-n-css=""></noscript>
 	<script defer="" nomodule="" src="_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script>
 	<script src="_next/static/chunks/webpack-8fa1640cc84ba8fe.js" defer=""></script>
@@ -71,6 +71,24 @@
 			src: url(https://fonts.gstatic.com/s/outfit/v11/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyC4I.woff) format('woff')
 		}
 	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const elements = document.querySelectorAll(".animate-on-scroll");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("animate");
+							observer.unobserve(entry.target); // Stop observing once animated
+						}
+					});
+				},
+				{ threshold: 0.1 }
+			);
+
+			elements.forEach((el) => observer.observe(el));
+		});
+	</script>
 </head>
 
 <body>
@@ -82,8 +100,8 @@
 			</a>
 			<ul class="Navbar_list__0e3n5">
 				<li><a class="Navbar_mobile_hide__I4qHm" href="about.html">About</a></li>
-				<li><a href="https://github.com">Github</a></li>
-				<li><a href="https://discord.gg/ghosthasgone">Discord</a></li>
+				<li><a target="_blank" href="https://www.discord.gg/ghosthasgone">Discord</a></li>
+				<li><a target="_blank" href="https://www.github.com">GitHub</a></li>
 				<li><a class="Navbar_download__HSTj5" href="download.html">Download</a></li>
 			</ul>
 		</nav>
@@ -100,7 +118,7 @@
 					</div>
 					<h3>You want Zoro for <strong>Windows</strong>, right?<br /><br />If this is incorrect, please note that
 						<BR/>Valorant is only available on windows.</h3>
-					<span>Looking for the GitHub Repository? Click <a href="https://www.github.com">here</a></span>
+					<span>Looking for the GitHub Repository? Click <a target="_blank" href="https://www.github.com" target="_blank" rel="noopener noreferrer">here</a></span>
 				</div>
 				<div class="Containers_content__7dsLq">
 					<div class="Download_card__RKE6t">
@@ -124,8 +142,8 @@
 			<div>
 					<h3>Contact</h3>
 					<ul>
-							<li><a href="mailto:ghosttowninquiries@gmail.com">Email Support</a></li>
-							<li><a href="https://discord.gg/ghosthasgone">Discord</a></li>
+							<li><a target="_blank" href="mailto:ghosttowninquiries@gmail.com">Email Support</a></li>
+							<li><a target="_blank" href="https://discord.gg/ghosthasgone">Discord</a></li>
 					</ul>
 			</div>
 			<div>

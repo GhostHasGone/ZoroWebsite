@@ -1,72 +1,165 @@
 /* General Container Styles */
 .developer-section {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	gap: 5rem;
-  }
-  
-  .developer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	background-color: #1f1f1f;
-	border-radius: 10px;
-	padding: 2rem;
-	max-width: 300px;
-	width: 100%;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .developer h2 {
-	font-size: 1.75rem;
-	color: #fff;
-	margin-top: 1rem;
-  }
-  
-  .developer p {
-	font-size: 1rem;
-	color: #a8a6a6;
-	margin-top: 0.5rem;
-	max-width: 250px;
-	line-height: 1.5;
-  }
-  
-  .profile-pic {
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 2px solid #fff;
-  }
-  
-  /* Divider Style */
-  .divider {
-	height: 300px;
-	background-color: #444;
-	margin: 2rem 0;
-	width: 1px;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media only screen and (max-width: 900px) {
-	.developer-section {
-	  flex-direction: column;
-	  gap: 1.5rem;
-	}
-  
-	.developer {
-	  max-width: 100%;
-	  padding: 1.5rem;
-	}
-  
-	.profile-pic {
-	  width: 100px;
-	  height: 100px;
-	}
-  
-	.divider {
-	  width: 90%;
-	}
-  }
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: center; /* Center the developers horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 2rem; /* Add space between developers */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 2rem auto; /* Shift everything down */
+    padding: 2rem;
+}
+
+
+.dev-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.dev-about h2 {
+    font-size: 3rem; /* Scales with root font size */
+    color: #ffffff;
+    margin-top: 5rem; /* Reduced for better scaling */
+    margin-bottom: 1rem;
+}
+
+/* About Zoro Section */
+.zoro-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20rem auto 10%; /* Increased top margin to move it further down */
+    padding: 2rem;
+    max-width: 60%; /* Reduced width to make the box thinner */
+    background-color: #1f1f1f;
+    border-radius: 0.625rem; /* Relative unit for border radius */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.zoro-about:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.zoro-about h2 {
+    font-size: 2rem; /* Scales with root font size */
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.zoro-about p {
+    font-size: 1.5rem; /* Scales with root font size */
+    color: #a8a6a6;
+    line-height: 1.8;
+    margin: 0 1rem;
+}
+
+/* Developer Cards */
+.developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 300px; /* Set a consistent width for cards */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.developer h2 {
+    font-size: 1.25rem; /* Scales with root font size */
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+.developer p {
+    font-size: 1rem;
+    color: #a8a6a6;
+    margin-top: 0.5rem;
+    max-width: 15.625rem; /* Scales with root font size */
+    line-height: 1.5;
+}
+
+/* Divider Style */
+.divider {
+    display: block; /* Make the divider visible */
+    width: 1px; /* Thin vertical line */
+    background-color: #343333; /* Dark gray color for the divider */
+    height: 24.8rem; /* Stretch to match the height of the content */
+    margin: 0 1rem; /* Add spacing around the divider */
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+}
+
+/* Scroll Animation Styles */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 900px) {
+    .developer-section {
+        flex-direction: column; /* Stack developers vertically on smaller screens */
+        gap: 2rem;
+    }
+
+    .divider {
+        display: none; /* Hide the divider on smaller screens */
+    }
+
+    .developer {
+        max-width: 100%; /* Allow full width on smaller screens */
+        padding: 1.5rem;
+    }
+
+    .profile-pic {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+
+    .zoro-about {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+
+    .zoro-about h2 {
+        font-size: 1.75rem;
+    }
+
+    .zoro-about p {
+        font-size: 0.875rem;
+    }
+
+    .dev-about h2 {
+        font-size: 1.75rem;
+    }
+}

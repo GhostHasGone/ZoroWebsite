@@ -4,7 +4,7 @@ body, html {
     font-family: Outfit, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
     background-color: #18191a;
     color: #fff;
-    accent-color: #F7374F;
+    accent-color: #FF4655;
     color-scheme: dark;
     overflow-y: overlay;
   }
@@ -42,7 +42,7 @@ body, html {
   }
   
   ::selection {
-    background-color: #F7374F;
+    background-color: #FF4655;
     color: #fff;
   }
   
@@ -75,8 +75,8 @@ body, html {
   
   a {
     color: #fc7796;
-    -webkit-text-decoration-color: #F7374F;
-    text-decoration-color: #F7374F;
+    -webkit-text-decoration-color: #FF4655;
+    text-decoration-color: #FF4655;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -174,7 +174,7 @@ body, html {
   }
   
   a.Navbar_download__HSTj5 {
-    background-color: #F7374F;
+    background-color: #FF4655;
     border-radius: .875rem;
     min-width: 8.75rem;
     min-height: 2.5rem;
@@ -183,7 +183,7 @@ body, html {
   
   a.Navbar_download__HSTj5:hover {
     opacity: 1;
-    background-color: #F7374F;
+    background-color: #f7505e;
   }
   
   .Navbar_navbar__GrSXC img {
@@ -247,4 +247,146 @@ body, html {
       font-size: 1.75rem;
     }
   }
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
   
+  .animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  nav.Navbar_navbar__GrSXC.animate-on-scroll {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 9.375rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 4.375rem;
+    box-sizing: border-box;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  nav.Navbar_navbar__GrSXC.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section.Home_first__dziyQ.animate-on-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4.375rem;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  section.Home_first__dziyQ.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .Home_index__g3etF {
+    text-align: center;
+  }
+
+  .ButtonGroup_container__V4HTo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .Button_button__TyCE7 {
+    background-color: #F7374F;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .Button_button__TyCE7:hover {
+    background-color: #fc7796;
+  }
+
+  .Button_medium__4dkiB {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  section.vertical.Home_second__JBpVu.animate-on-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4.375rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .Home_invert__YJw4U {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .Home_invert__YJw4U img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .Home_second__JBpVu img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .Home_second__JBpVu h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .Home_second__JBpVu p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  footer.Footer_footer__pQtti.animate-on-scroll {
+    min-height: 12rem;
+    background-color: #131415;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 4rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  footer.Footer_footer__pQtti.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
-	<title>Lilith</title>
+	<title>Zoro | About</title>
 	<meta name="next-head-count" content="3" />
 	<meta property="og:title" content="Lilith" />
 	<meta property="og:type" content="website" />
@@ -25,28 +25,56 @@
 			<!-- Navigation links -->
 			<ul class="Navbar_list__0e3n5">
 				<li><a class="Navbar_mobile_hide__I4qHm" href="about.html">About</a></li>
-				<li><a href="https://github.com">Github</a></li>
-				<li><a href="https://discord.gg/ghosthasgone">Discord</a></li>
+				<li><a href="https://www.discord.gg/ghosthasgone" target="_blank" rel="noopener noreferrer">Discord</a></li>
+				<li><a href="https://www.github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
 				<li><a class="Navbar_download__HSTj5" href="download.html">Download</a></li>
 			</ul>
 		</nav>
 
 		<main>
-			<section class="developer-section">
+			<!-- About Zoro Section -->
+			<div class="zoro-about animate-on-scroll">
+				<h2>About Zoro</h2>
+				<p>Zoro is a powerful and user-friendly Valorant stat tracker designed to enhance your gaming experience. With real-time in-game stats, a shop viewer to check daily offers without launching the game, and customizable features to tailor your stats display, Zoro provides everything you need to stay ahead. Whether you're a casual player or a competitive gamer, Zoro delivers instant insights and tools to help you improve and enjoy the game like never before.</p>
+			 </div>
+
+			<!-- Meet the Developers Section -->
+			<div class="dev-about animate-on-scroll">
+				<h2>Meet the Developers</h2>
+			</div>
+			<section class="developer-section animate-on-scroll">
 				<div class="developer">
 					<img src="images/dev1.png" alt="Developer 1" class="profile-pic">
-					<h2>Saucywan</h2>
+					<h2>Saucy</h2>
 					<p>A chill full-stack dev who loves building stuff that nobody asked for. Always focused on great user experiences, but never too busy to enjoy the ride. Energy Drink in hand, code on screen.</p>
 				</div>
 				<div class="divider"></div>
 				<div class="developer">
 					<img src="images/dev2.png" alt="Developer 2" class="profile-pic">
-					<h2>GhostHasGone</h2>
-					<p>A dev who really needs to touch grass. Constantly coding and pushing limits on what bad code can be. Usually with 3 hours of sleep and a fridge full of white Monster</p>
+					<h2>Ghost</h2>
+					<p>A dev who really needs to touch grass. Constantly coding and pushing limits on what bad code can be. Usually with 3 hours of sleep and a fridge full of white Monster.</p>
 				</div>
 			</section>
 		</main>
 	</div>
+	<script>
+	  document.addEventListener("DOMContentLoaded", () => {
+	    const elements = document.querySelectorAll(".animate-on-scroll");
+	    const observer = new IntersectionObserver(
+	      (entries) => {
+	        entries.forEach((entry) => {
+	          if (entry.isIntersecting) {
+	            entry.target.classList.add("animate");
+	            observer.unobserve(entry.target); // Stop observing once animated
+	          }
+	        });
+	      },
+	      { threshold: 0.1 }
+	    );
+
+	    elements.forEach((el) => observer.observe(el));
+	  });
+	</script>
 </body>
 </html>
 <!-- Footer section with contact and copyright information -->
@@ -54,8 +82,8 @@
     <div>
         <h3>Contact</h3>
         <ul>
-            <li><a href="mailto:ghosttowninquiries@gmail.com">Email Support</a></li>
-            <li><a href="https://discord.gg/ghosthasgone">Discord</a></li>
+            <li><a target="_blank" href="mailto:ghosttowninquiries@gmail.com">Email Support</a></li>
+            <li><a target="_blank" href="https://discord.gg/ghosthasgone">Discord</a></li>
         </ul>
     </div>
     <div>
