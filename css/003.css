@@ -1,0 +1,72 @@
+/* General Container Styles */
+.developer-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 5rem;
+  }
+  
+  .developer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #1f1f1f;
+	border-radius: 10px;
+	padding: 2rem;
+	max-width: 300px;
+	width: 100%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .developer h2 {
+	font-size: 1.75rem;
+	color: #fff;
+	margin-top: 1rem;
+  }
+  
+  .developer p {
+	font-size: 1rem;
+	color: #a8a6a6;
+	margin-top: 0.5rem;
+	max-width: 250px;
+	line-height: 1.5;
+  }
+  
+  .profile-pic {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid #fff;
+  }
+  
+  /* Divider Style */
+  .divider {
+	height: 300px;
+	background-color: #444;
+	margin: 2rem 0;
+	width: 1px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media only screen and (max-width: 900px) {
+	.developer-section {
+	  flex-direction: column;
+	  gap: 1.5rem;
+	}
+  
+	.developer {
+	  max-width: 100%;
+	  padding: 1.5rem;
+	}
+  
+	.profile-pic {
+	  width: 100px;
+	  height: 100px;
+	}
+  
+	.divider {
+	  width: 90%;
+	}
+  }
