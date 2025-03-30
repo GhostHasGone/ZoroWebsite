@@ -108,36 +108,45 @@
 				</div>
 			</section>
 		</main>
-<!-- Footer section with contact and copyright information -->
-<footer class="Footer_footer__pQtti">
-    <div>
-        <h3>Contact</h3>
-        <ul>
-            <li><a target="_blank" href="mailto:ghosttowninquiries@gmail.com">Email Support</a></li>
-            <li><a target="_blank" href="https://www.discord.gg/nEXwPTYSeD">Discord</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Legal</h3>
-        <p>&copy; 2025 Zoro. All rights reserved.</p>
-    </div>
-</footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".animate-on-scroll");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+		<!-- Footer section with contact and copyright information -->
+		<footer class="Footer_footer__pQtti">
+			<div class="Footer_content">
+				<div class="Footer_section">
+					<h3 class="animate-on-scroll">Contact</h3>
+					<ul class="Footer_list">
+						<li class="animate-on-scroll"><a target="_blank" href="mailto:ghosttowninquiries@gmail.com">Email Support</a></li>
+						<li class="animate-on-scroll"><a target="_blank" href="https://discord.gg/nEXwPTYSeD">Discord</a></li>
+					</ul>
+				</div>
+				<div class="Footer_section">
+					<h3 class="animate-on-scroll">Legal</h3>
+					<ul class="Footer_list">
+						<li class="animate-on-scroll"><a href="legal/PP.html">Privacy Policy</a></li>
+						<li class="animate-on-scroll"><a href="legal/tos.html">TOS</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="Footer_copyright">
+				<p class="animate-on-scroll">&copy; 2025 Zoro. All rights reserved.</p>
+			</div>
+		</footer>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const elements = document.querySelectorAll(".animate-on-scroll");
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("animate");
+							}
+						});
+					},
+					{ threshold: 0.1 }
+				);
 
-    elements.forEach((el) => observer.observe(el));
-  });
-</script>
+				elements.forEach((el) => observer.observe(el));
+			});
+		</script>
+	</div>
 </body>
 </html>

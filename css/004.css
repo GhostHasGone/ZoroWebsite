@@ -284,3 +284,60 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Footer Styles */
+  .Footer_footer__pQtti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    gap: 1.5rem;
+  }
+
+  .Footer_content {
+    display: flex;
+    justify-content: center;
+    gap: 4rem; /* Space between Contact and Legal sections */
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .Footer_section {
+    text-align: center;
+    flex: 1; /* Ensures both sections take equal space */
+  }
+
+  .Footer_section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  .Footer_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .Footer_list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .Footer_list a {
+    color: #fc7796;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .Footer_list a:hover {
+    color: #ff4655;
+  }
+
+  .Footer_copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #a8a6a6;
+    margin-top: 1rem;
+  }
