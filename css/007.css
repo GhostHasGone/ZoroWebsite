@@ -41,6 +41,13 @@
     margin-bottom: 1rem;
 }
 
+.TermsOfService_content__7dsLq p{
+    font-size: 1.25rem;
+    color: #a8a6a6;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
 .TermsOfService_content__7dsLq p,
 .TermsOfService_content__7dsLq ul {
     text-align: center; /* Center text and lists */
