@@ -84,10 +84,32 @@
   }
   
   .Home_first__dziyQ {
+    background-image: url('../images/home/0.png'); /* Correct relative path */
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
     background-size: cover;
-  }
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Required for the overlay */
+}
+
+.Home_first__dziyQ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Place the overlay behind the content */
+}
+
+.Home_first__dziyQ > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
   
   .Home_first__dziyQ > :first-child {
     margin-right: 12.5rem;
